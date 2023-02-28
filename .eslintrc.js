@@ -9,8 +9,6 @@ module.exports = {
         'standard-with-typescript',
         "plugin:i18next/recommended"
     ],
-    overrides: [
-    ],
     parserOptions: {
         ecmaVersion: 'latest',
         sourceType: 'module',
@@ -45,12 +43,20 @@ module.exports = {
         '@typescript-eslint/ban-ts-comment': 'warn',
         '@typescript-eslint/no-misused-promises': 'warn',
         '@typescript-eslint/naming-convention': 'off',
-        "i18next/no-literal-string": ['error', { markupOnly: true }],
+        "i18next/no-literal-string": ['error', { markupOnly: true, "ignoreAttribute": ["data-testid"] }],
         'max-len': ['error', { ignoreComments: true, code: 100 }],
         "semi": "off",
         "@typescript-eslint/semi": "off"
     },
     globals: {
         __IS_DEV__: true
-    }
+    },
+    overrides: [
+        {
+            files: ['**/src/**/*.test.{ts,tsx}'],
+            rules: {
+                "i18next/no-literal-string": 'off'
+            }
+        }
+    ]
 }
