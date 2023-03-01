@@ -48,6 +48,7 @@ module.exports = {
         "semi": "off",
         "@typescript-eslint/semi": "off",
         '@typescript-eslint/consistent-type-imports': 'off',
+        '@typescript-eslint/consistent-type-assertions': 'off'
     },
     globals: {
         __IS_DEV__: true
