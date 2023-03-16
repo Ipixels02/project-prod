@@ -7,17 +7,20 @@ module.exports = {
     extends: [
         'plugin:react/recommended',
         'standard-with-typescript',
-        "plugin:i18next/recommended"
+        'plugin:i18next/recommended'
     ],
+    parser: '@typescript-eslint/parser',
     parserOptions: {
+        project: ['./tsconfig.json'],
         ecmaVersion: 'latest',
         sourceType: 'module',
-        project: ['./tsconfig.json']
+        tsconfigRootDir: __dirname
     },
+    ignorePatterns: ['config/**'],
     plugins: [
         'react',
         '@typescript-eslint',
-        "i18next"
+        'i18next'
     ],
     rules: {
         'react/jsx-indent': [2, 4],
@@ -43,10 +46,14 @@ module.exports = {
         '@typescript-eslint/ban-ts-comment': 'warn',
         '@typescript-eslint/no-misused-promises': 'warn',
         '@typescript-eslint/naming-convention': 'off',
-        "i18next/no-literal-string": ['error', { markupOnly: true, "ignoreAttribute": ["data-testid", "to"] }],
+        'i18next/no-literal-string': ['error',
+            {
+                markupOnly: true, ignoreAttribute: ['data-testid', 'to']
+            }
+        ],
         'max-len': ['error', { ignoreComments: true, code: 100 }],
-        "semi": "off",
-        "@typescript-eslint/semi": "off",
+        semi: 'off',
+        '@typescript-eslint/semi': 'off',
         '@typescript-eslint/consistent-type-imports': 'off',
         '@typescript-eslint/consistent-type-assertions': 'off'
     },
@@ -57,7 +64,7 @@ module.exports = {
         {
             files: ['**/src/**/*.test.{ts,tsx}'],
             rules: {
-                "i18next/no-literal-string": 'off'
+                'i18next/no-literal-string': 'off'
             }
         }
     ]
