@@ -56,6 +56,7 @@ module.exports = {
         semi: 'off',
         '@typescript-eslint/semi': 'off',
         '@typescript-eslint/consistent-type-imports': 'off',
+        '@typescript-eslint/consistent-type-exports': 'off',
         '@typescript-eslint/consistent-type-assertions': 'off',
         'react-hooks/rules-of-hooks': 'error', // Checks rules of Hooks
         'react-hooks/exhaustive-deps': 'error', // Checks effect dependencies
