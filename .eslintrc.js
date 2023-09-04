@@ -16,7 +16,7 @@ module.exports = {
         sourceType: 'module',
         tsconfigRootDir: __dirname
     },
-    ignorePatterns: ['config/**'],
+    ignorePatterns: ['config/**', 'webpack.config.ts'],
     plugins: [
         'react',
         '@typescript-eslint',
