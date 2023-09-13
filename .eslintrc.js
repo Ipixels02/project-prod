@@ -62,7 +62,9 @@ module.exports = {
         'react-hooks/exhaustive-deps': 'error', // Checks effect dependencies
         'no-param-reassign': 'off',
         '@typescript-eslint/restrict-plus-operands': 'off',
-        'react/display-name': 'off'
+        'react/display-name': 'off',
+        '@typescript-eslint/prefer-ts-expect-error': 'off',
+        '@typescript-eslint/no-dynamic-delete': 'warn'
     },
     globals: {
         __IS_DEV__: true
