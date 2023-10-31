@@ -49,7 +49,8 @@ module.exports = {
         '@typescript-eslint/naming-convention': 'off',
         'i18next/no-literal-string': ['error',
             {
-                markupOnly: true, ignoreAttribute: ['data-testid', 'to']
+                markupOnly: true,
+                ignoreAttribute: ['data-testid', 'to']
             }
         ],
         'max-len': ['error', { ignoreComments: true, code: 120 }],
@@ -64,10 +65,13 @@ module.exports = {
         '@typescript-eslint/restrict-plus-operands': 'off',
         'react/display-name': 'off',
         '@typescript-eslint/prefer-ts-expect-error': 'off',
-        '@typescript-eslint/no-dynamic-delete': 'warn'
+        '@typescript-eslint/no-dynamic-delete': 'warn',
+        'no-undef': 'off',
+        '@typescript-eslint/no-invalid-void-type': 'warn'
     },
     globals: {
-        __IS_DEV__: true
+        __IS_DEV__: true,
+        __API__: true
     },
     overrides: [
         {
