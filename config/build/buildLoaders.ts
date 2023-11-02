@@ -21,7 +21,7 @@ export function buildLoaders ({ isDev }: BuildOptions): webpack.RuleSetRule[] {
             {
                 loader: 'ts-loader',
                 options: {
-                    transpileOnly: true,
+                    transpileOnly: false,
                     // getCustomTransformers: () => ({
                     //     before: [ReactRefreshTypeScript()]
                     // }),
