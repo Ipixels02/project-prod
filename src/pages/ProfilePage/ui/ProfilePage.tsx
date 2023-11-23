@@ -3,8 +3,8 @@ import { useTranslation } from 'react-i18next';
 import { DynamicModuleLoader, ReducersList } from 'shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
 import {
     fetchProfileData,
-    getProfileData,
-    getProfileError, getProfileForm,
+    getProfileError,
+    getProfileForm,
     getProfileIsLoading, getProfileReadonly, getProfileValidateErrors, profileActions,
     ProfileCard,
     profileReducer,
