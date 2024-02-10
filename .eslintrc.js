@@ -67,7 +67,8 @@ module.exports = {
         '@typescript-eslint/prefer-ts-expect-error': 'off',
         '@typescript-eslint/no-dynamic-delete': 'warn',
         'no-undef': 'off',
-        '@typescript-eslint/no-invalid-void-type': 'warn'
+        '@typescript-eslint/no-invalid-void-type': 'warn',
+        '@typescript-eslint/restrict-template-expressions': 'warn'
     },
     globals: {
         __IS_DEV__: true,
