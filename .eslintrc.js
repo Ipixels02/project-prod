@@ -68,7 +68,8 @@ module.exports = {
         '@typescript-eslint/no-dynamic-delete': 'warn',
         'no-undef': 'off',
         '@typescript-eslint/no-invalid-void-type': 'warn',
-        '@typescript-eslint/restrict-template-expressions': 'warn'
+        '@typescript-eslint/restrict-template-expressions': 'warn',
+        'react/no-array-index-key': 'off'
     },
     globals: {
         __IS_DEV__: true,
