@@ -6,6 +6,7 @@ import { Button, ButtonTheme } from 'shared/ui/Button/Button';
 import { LoginModal } from 'features/AuthByUsername';
 import { useDispatch, useSelector } from 'react-redux';
 import { getUserAuthData, userActions } from 'entities/User';
+import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
 
 interface NavbarProps {
     className?: string
@@ -13,7 +14,7 @@ interface NavbarProps {
 
 export const Navbar = memo(({ className }: NavbarProps) => {
     const { t } = useTranslation();
-    const dispath = useDispatch()
+    const dispatch = useAppDispatch()
 
     const [isAuthModal, setIsAuthModal] = useState(false);
     const authData = useSelector(getUserAuthData)
@@ -27,13 +28,13 @@ export const Navbar = memo(({ className }: NavbarProps) => {
     }, []);
 
     const onLogout = useCallback(() => {
-        dispath(userActions.logout())
-    }, [dispath]);
+        dispatch(userActions.logout())
+    }, [dispatch]);
 
     return (
         <>
             {!authData && (
-                <div className={classNames(cls.navbar, {}, [className])}>
+                <header className={classNames(cls.navbar, {}, [className])}>
                     <div className={cls.links}>
                         <Button
                             theme={ButtonTheme.CLEAR_INVERTED}
@@ -44,10 +45,10 @@ export const Navbar = memo(({ className }: NavbarProps) => {
                         </Button>
                         <LoginModal isOpen={isAuthModal} onClose={onCloseModal}/>
                     </div>
-                </div>
+                </header>
             )}
             {authData && (
-                <div className={classNames(cls.navbar, {}, [className])}>
+                <header className={classNames(cls.navbar, {}, [className])}>
                     <Button
                         theme={ButtonTheme.CLEAR_INVERTED}
                         className={cls.links}
@@ -55,7 +56,7 @@ export const Navbar = memo(({ className }: NavbarProps) => {
                     >
                         {t('Выйти')}
                     </Button>
-                </div>
+                </header>
             )}
         </>
     )
