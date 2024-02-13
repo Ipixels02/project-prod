@@ -25,6 +25,7 @@ export interface StateSchema {
 export type StateSchemaKey = keyof StateSchema;
 
 export interface ReducerManager {
+    // true - вмонтирован, false - демонтирован
     getReducerMap: () => ReducersMapObject<StateSchema>
     reduce: (state: StateSchema, action: AnyAction) => CombinedState<StateSchema>
     add: (key: StateSchemaKey, reducer: Reducer) => void

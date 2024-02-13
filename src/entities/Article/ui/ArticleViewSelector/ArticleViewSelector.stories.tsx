@@ -7,8 +7,8 @@ export default {
     title: 'shared/ArticleViewSelector',
     component: ArticleViewSelector,
     argTypes: {
-        backgroundColor: { control: 'color' },
-    },
+        backgroundColor: { control: 'color' }
+    }
 } as ComponentMeta<typeof ArticleViewSelector>;
 
 const Template: ComponentStory<typeof ArticleViewSelector> = (args) => <ArticleViewSelector {...args} />;

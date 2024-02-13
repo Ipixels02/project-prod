@@ -8,20 +8,20 @@ import cls from './ArticleViewSelector.module.scss';
 import { ArticleView } from '../../model/types/article';
 
 interface ArticleViewSelectorProps {
-    className?: string;
-    view: ArticleView,
-    onViewClick?: (view: ArticleView) => void;
+    className?: string
+    view: ArticleView
+    onViewClick?: (view: ArticleView) => void
 }
 
 const viewTypes = [
     {
         view: ArticleView.SMALL,
-        icon: TiledIcon,
+        icon: TiledIcon
     },
     {
         view: ArticleView.BIG,
-        icon: ListIcon,
-    },
+        icon: ListIcon
+    }
 ];
 
 export const ArticleViewSelector = memo((props: ArticleViewSelectorProps) => {
@@ -35,6 +35,7 @@ export const ArticleViewSelector = memo((props: ArticleViewSelectorProps) => {
         <div className={classNames(cls.ArticleViewSelector, {}, [className])}>
             {viewTypes.map((viewType) => (
                 <Button
+                    key={viewType.view}
                     theme={ButtonTheme.CLEAR}
                     onClick={onClick(viewType.view)}
                 >
