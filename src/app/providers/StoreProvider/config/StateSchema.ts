@@ -8,11 +8,12 @@ import { ArticleDetailsSchema } from 'entities/Article';
 import { ArticleDetailsCommentsSchema } from 'pages/ArticleDetailsPage';
 import { AddCommentFormSchema } from 'features/addCommentForm';
 import { ArticlesPageSchema } from 'pages/ArticlesPage';
+import { ScrollSaverSchema } from 'widgets/ScrollSaver/model/types/ScrollSaverSchema';
 
 export interface StateSchema {
     counter: CounterSchema
     user: UserSchema
-
+    scrollSaver: ScrollSaverSchema
     // Асинхронные редюсеры
     loginForm?: LoginSchema
     profile?: ProfileSchema
