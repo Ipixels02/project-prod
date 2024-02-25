@@ -25,7 +25,7 @@ export const ArticleList = memo((props: ArticleListProps) => {
     const {
         className,
         articles,
-        view = ArticleView.BIG,
+        view = ArticleView.SMALL,
         isLoading,
         target
     } = props;

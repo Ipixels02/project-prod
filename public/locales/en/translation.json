@@ -38,5 +38,8 @@
   "Айти": "IT",
   "Экономика": "Economics",
   "Все статьи": "All articles",
-  "Наука": "Science"
+  "Наука": "Science",
+  "Создание новой статьи": "Creating a new article",
+  "Редактирование статьи с ID = ": "Editing an article with an ID = ",
+  "Создать статью": "Create new article"
 }
