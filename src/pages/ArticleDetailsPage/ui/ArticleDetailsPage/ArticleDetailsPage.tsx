@@ -24,7 +24,9 @@ import { getArticleRecommendationsIsLoading } from '../../model/selectors/recomm
 import {
     fetchArticleRecommendations
 } from '../../model/services/fetchArticleRecommendations/fetchArticleRecommendations';
-import { ArticleDetailsPageHeader } from 'pages/ArticleDetailsPage/ui/ArticleDetailsPageHeader/ArticleDetailsPageHeader';
+import {
+    ArticleDetailsPageHeader
+} from 'pages/ArticleDetailsPage/ui/ArticleDetailsPageHeader/ArticleDetailsPageHeader';
 
 interface ArticleDetailsPageProps {
     className?: string
